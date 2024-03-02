@@ -3,7 +3,7 @@
 
 const server = require('express')
 const app = server()
-
+require('dotenv').config()
 const db = require('./db')
 
 const bodyParser = require('body-parser')
@@ -27,6 +27,6 @@ app.get('/rabiya', (req, res) => {
     res.send("SHE IS PRINCESS")
 })
 
-app.listen(1111, () => {
+app.listen(process.env.PORT, () => {
     console.log("server STRT");
 })
